@@ -23,6 +23,8 @@ from opencensus.trace.samplers import ProbabilitySampler
 from opencensus.trace.tracer import Tracer
 from opencensus.ext.flask.flask_middleware import FlaskMiddleware
 
+stats = stats_module.stats
+view_manager = stats.view_manager
 # Logging
 config_integration.trace_integrations(['logging'])
 config_integration.trace_integrations(['requests'])
